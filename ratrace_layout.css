@@ -1,0 +1,139 @@
+﻿@charset "utf-8";
+
+
+/*
+   CIS370-898 Introduction to Web Development
+   Final Project: Rat Race
+   Author: Reese Henry
+   Date:   4/20/2018
+  
+   Filename: ratrace_layout.css
+
+*/
+
+
+/* HTML styles */
+
+html {
+    max-width: 1024px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* Grid styles */
+
+div.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 8.33% 75% 16.67%;
+    grid-template-rows: 12.5% 31.25% 25% 25% 6.25%;
+}
+
+header, footer {
+    grid-column: span 3;
+    grid-row: span 1;
+    background: pink;
+}
+
+div.left {
+    grid-column: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 3;
+    background: green;
+}
+
+div.messageArea {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end : span 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background: gray;
+}
+
+div.left_message, div#message_area_image {
+    float: left;
+}
+
+div.right_message {
+    float: right;
+}
+
+div.topLane {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 3;
+    grid-row-end: span 1;
+    background: red;
+}
+
+div.bottomLane {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+    background: purple;
+}
+
+div.right {
+    grid-column: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    background: green;
+}
+
+div.top_finish_line {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    grid-row-start: 3;
+    grid-row-end: span 1;
+    background: orange;
+}
+
+div.bottom_finish_line {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+    background: blue;
+}
+
+/* Element styles*/
+
+img#logo_img {
+    display: block;
+    width: 44%;
+    margin: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img#traffic_light_red, img#traffic_light_green {
+    width: 100%;
+}
+
+img#rat_damon, img#rat_leblanc {
+    display: block;
+    width: 23%;
+    position: relative;
+}
+
+img#rat_damon {
+    left: 5%;
+}
+
+img#rat_leblanc {
+    left: 84%;
+}
+
+img#cheese_top, img#cheese_bottom {
+    display: block;
+    width: 65%;
+}
