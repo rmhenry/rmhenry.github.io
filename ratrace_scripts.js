@@ -36,7 +36,8 @@ var leblancPosition = 0;
 // Run the init() function when the page loads
 window.onload = init;
 
-document.getElementById("message_area_image").click = StartRace;
+//document.getElementById("message_area_image").click = StartRace;
+window.onclick = StartRace;
 //window.alert("yo");
 
 function init() {
