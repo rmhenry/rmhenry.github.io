@@ -35,7 +35,7 @@ var interval = setInterval(MoveRacers, 250);
 
 // Run the init() function when the page loads
 window.onload = init;
-onmousedown = MoveRacers;
+window.onmousedown = MoveRacers;
 //window.alert("yo");
 
 function init() {
