@@ -50,35 +50,14 @@ function init() {
 
 
 
-<<<<<<< HEAD
 function StartRace(e) {
     document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
 
-    while (leblancPosition < 85 && damonPosition < 85) {
-        function moveRacers() {           //  create a loop function
-            setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-                damonPosition += (Math.floor(Math.random() * 3) + 1);
-                document.getElementById("rat_damon").style.left = damonPosition + '%';
-                leblancPosition += (Math.floor(Math.random() * 3) + 1);
-                document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
-                  
-                if (leblancPosition < 85 && damonPosition < 85) {            //  if the counter < 10, call the loop function
-                    moveRacers();             //  ..  again which will trigger another 
-                }                        //  ..  setTimeout()
-            }, 1000)
-        }
-        
-    }
-=======
-function MoveRacers(e) {
-    document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
-    document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
     damonPosition += (Math.floor(Math.random() * 3) + 1);
     document.getElementById("rat_damon").style.left = damonPosition + '%';
     leblancPosition += (Math.floor(Math.random() * 3) + 1);
     document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
->>>>>>> parent of b1afb84... added while loop to MoveRacers
 }
 
 function MoveByFivePercent(currentPosition) {
