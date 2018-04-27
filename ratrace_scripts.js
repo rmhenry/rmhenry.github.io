@@ -46,7 +46,8 @@ function init() {
 function MoveRacers() {
     document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-    racerPosition += 5;
+    //racerPosition += 5;
+    racerPosition += (Math.floor(Math.random() * 6) + 1);
     document.getElementById("rat_damon").style.left = racerPosition + '%';
     document.getElementById("rat_leblanc").style.left = racerPosition + racerPosition + '%';
 }
