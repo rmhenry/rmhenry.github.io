@@ -30,14 +30,14 @@ var rightMessage = document.getElementById("right_message").innerHTML;
 var messageAreaImage = document.getElementById("message_area_image").innerHTML;
 var damonPosition = 0;
 var leblancPosition = 0;
-//var interval = setInterval(MoveRacers, 250);
+var interval = setInterval(MoveRacers, 250);
 
 
 // Run the init() function when the page loads
 window.onload = init;
 
 //document.getElementById("message_area_image").click = StartRace;
-window.onclick = StartRace;
+window.onclick = MoveRacers;
 //window.alert("yo");
 
 function init() {
@@ -50,7 +50,7 @@ function init() {
 
 
 
-function StartRace(e) {
+function MoveRacers(e) {
     document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
 
