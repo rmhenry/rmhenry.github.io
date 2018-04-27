@@ -30,6 +30,7 @@ var rightMessage = document.getElementById("right_message").innerHTML;
 var messageAreaImage = document.getElementById("message_area_image").innerHTML;
 var damonPosition = 0;
 var leblancPosition = 0;
+var interval = setInterval(MoveRacers, 1000);
 
 
 // Run the init() function when the page loads
@@ -44,6 +45,8 @@ function init() {
     document.getElementById("rat_leblanc").style.left = 0;
     messageAreaImage = "<img src='traffic_light_red.png' />";
 }
+
+
 
 function MoveRacers() {
     document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
