@@ -50,6 +50,7 @@ function init() {
 
 
 
+<<<<<<< HEAD
 function StartRace(e) {
     document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
@@ -69,6 +70,15 @@ function StartRace(e) {
         }
         
     }
+=======
+function MoveRacers(e) {
+    document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
+    document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
+    damonPosition += (Math.floor(Math.random() * 3) + 1);
+    document.getElementById("rat_damon").style.left = damonPosition + '%';
+    leblancPosition += (Math.floor(Math.random() * 3) + 1);
+    document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+>>>>>>> parent of b1afb84... added while loop to MoveRacers
 }
 
 function MoveByFivePercent(currentPosition) {
