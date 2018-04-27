@@ -30,12 +30,12 @@ var rightMessage = document.getElementById("right_message").innerHTML;
 var messageAreaImage = document.getElementById("message_area_image").innerHTML;
 var damonPosition = 0;
 var leblancPosition = 0;
-var interval = setInterval(MoveRacers, 250);
-
 
 // Run the init() function when the page loads
 window.onload = init;
+
 document.getElementById("message_area_image").onmousedown = MoveRacers;
+var interval = setInterval(MoveRacers, 250);
 //window.alert("yo");
 
 function init() {
