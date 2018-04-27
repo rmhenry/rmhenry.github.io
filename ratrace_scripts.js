@@ -50,12 +50,14 @@ function init() {
 
 
 function MoveRacers(e) {
-    document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
-    document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-    damonPosition += (Math.floor(Math.random() * 3) + 1);
-    document.getElementById("rat_damon").style.left = damonPosition + '%';
-    leblancPosition += (Math.floor(Math.random() * 3) + 1);
-    document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+    while (leblancPosition < 85 || damonPosition < 85) {
+        document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
+        document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
+        damonPosition += (Math.floor(Math.random() * 3) + 1);
+        document.getElementById("rat_damon").style.left = damonPosition + '%';
+        leblancPosition += (Math.floor(Math.random() * 3) + 1);
+        document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+    }
 }
 
 function MoveByFivePercent(currentPosition) {
