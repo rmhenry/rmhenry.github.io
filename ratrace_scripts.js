@@ -51,7 +51,7 @@ function init() {
 
 
 function MoveRacers(e) {
-    setInterval(function () {
+    var moveRacersInterval = setInterval(function () {
         document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
         document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
 
@@ -61,7 +61,7 @@ function MoveRacers(e) {
         document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
-            return;
+            clearInterval(moveRacersInterval);
         }
     }, 200);
 
