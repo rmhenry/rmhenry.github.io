@@ -28,7 +28,9 @@
 var leftMessage = document.getElementById("left_message").innerHTML;
 var rightMessage = document.getElementById("right_message").innerHTML;
 var messageAreaImage = document.getElementById("message_area_image").innerHTML;
-var racerPosition = 0;
+var damonPosition = 0;
+var leblancPosition = 0;
+
 
 // Run the init() function when the page loads
 window.onload = init;
@@ -46,10 +48,10 @@ function init() {
 function MoveRacers() {
     document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-    //racerPosition += 5;
-    racerPosition += (Math.floor(Math.random() * 6) + 1);
-    document.getElementById("rat_damon").style.left = racerPosition + '%';
-    document.getElementById("rat_leblanc").style.left = racerPosition + racerPosition + '%';
+    damonPosition += (Math.floor(Math.random() * 5) + 1);
+    document.getElementById("rat_damon").style.left = damonPosition + '%';
+    leblancPosition += (Math.floor(Math.random() * 5) + 1);
+    document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 }
 
 function MoveByFivePercent(currentPosition) {
