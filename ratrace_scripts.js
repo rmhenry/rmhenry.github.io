@@ -35,7 +35,7 @@ var interval = setInterval(MoveRacers, 250);
 
 // Run the init() function when the page loads
 window.onload = init;
-window.onmousedown = MoveRacers;
+document.getElementById("message_area_image").onmousedown = MoveRacers;
 //window.alert("yo");
 
 function init() {
