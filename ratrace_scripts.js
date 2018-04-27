@@ -59,6 +59,10 @@ function MoveRacers(e) {
         document.getElementById("rat_damon").style.left = damonPosition + '%';
         leblancPosition += (Math.floor(Math.random() * 3) + 1);
         document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+
+        if (leblancPosition >= 85 || damonPosition >= 85) {
+            return;
+        }
     }, 200);
 
 }
