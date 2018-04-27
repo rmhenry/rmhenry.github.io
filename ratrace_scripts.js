@@ -30,13 +30,13 @@ var rightMessage = document.getElementById("right_message").innerHTML;
 var messageAreaImage = document.getElementById("message_area_image").innerHTML;
 var damonPosition = 0;
 var leblancPosition = 0;
-var interval = setInterval(MoveRacers, 250);
+//var interval = setInterval(MoveRacers, 250);
 
 
 // Run the init() function when the page loads
 window.onload = init;
 
-document.getElementById("message_area_image").click = MoveRacers;
+document.getElementById("message_area_image").click = StartRace;
 //window.alert("yo");
 
 function init() {
@@ -49,14 +49,24 @@ function init() {
 
 
 
-function MoveRacers(e) {
+function StartRace(e) {
+    document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
+    document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
+
     while (leblancPosition < 85 && damonPosition < 85) {
-        document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
-        document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-        damonPosition += (Math.floor(Math.random() * 3) + 1);
-        document.getElementById("rat_damon").style.left = damonPosition + '%';
-        leblancPosition += (Math.floor(Math.random() * 3) + 1);
-        document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+        function moveRacers() {           //  create a loop function
+            setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+                damonPosition += (Math.floor(Math.random() * 3) + 1);
+                document.getElementById("rat_damon").style.left = damonPosition + '%';
+                leblancPosition += (Math.floor(Math.random() * 3) + 1);
+                document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+                  
+                if (leblancPosition < 85 && damonPosition < 85) {            //  if the counter < 10, call the loop function
+                    moveRacers();             //  ..  again which will trigger another 
+                }                        //  ..  setTimeout()
+            }, 1000)
+        }
+        
     }
 }
 
