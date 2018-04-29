@@ -39,8 +39,6 @@ window.onload = init;
 // Run the init() function when the page loads
 window.onclick = MoveRacers;
 
-DetermineWinner();
-
 function init() {
     document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
     document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
@@ -62,6 +60,7 @@ function MoveRacers(e) {
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
             clearInterval(moveRacersInterval);
+            DetermineWinner();
         }
     }, 200);
 
