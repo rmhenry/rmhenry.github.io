@@ -67,6 +67,8 @@ function MoveRacers(e) {
 }
 
 function DetermineWinner() {
+    messageAreaImage = "<img src='trophy.png' />";
+
     if (damonPosition > leblancPosition) {
         document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1>";
         document.getElementById("right_message").innerHTML = "<h1>Jason Bourne to run!</h1>";
