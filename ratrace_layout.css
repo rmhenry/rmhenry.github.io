@@ -12,7 +12,7 @@
 */
 
 
-/* HTML styles */
+/* HTML and body styles */
 
 html {
     max-width: 1024px;
@@ -22,6 +22,10 @@ html {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+}
+
+body {
+    background-image: url("alley.png");
 }
 
 /* Grid styles */
@@ -99,13 +103,13 @@ div.bottom_finish_line {
 
 /* Element styles - Classes */
 
-div.background {
+/*div.background {
     background-image: url("alley.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 /* Element styles - IDs */
 
