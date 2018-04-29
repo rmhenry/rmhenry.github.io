@@ -36,9 +36,8 @@ var leblancPosition = 0;
 // Run the init() function when the page loads
 window.onload = init;
 
-//document.getElementById("message_area_image").click = StartRace;
+// Run the init() function when the page loads
 window.onclick = MoveRacers;
-//window.alert("yo");
 
 function init() {
     document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
@@ -64,13 +63,5 @@ function MoveRacers(e) {
             clearInterval(moveRacersInterval);
         }
     }, 200);
-
-}
-
-function MoveByFivePercent(currentPosition) {
-    currentPosition += 5;
-}
-
-function AmountToString() {
 
 }
