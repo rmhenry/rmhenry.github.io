@@ -67,7 +67,7 @@ function MoveRacers(e) {
 }
 
 function DetermineWinner() {
-    messageAreaImage = "<img src='trophy.png' />";
+    document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
 
     if (damonPosition > leblancPosition) {
         document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1>";
