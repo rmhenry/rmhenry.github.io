@@ -25,8 +25,8 @@
 
 /* ================================================================= */
 
-var damonPosition = 0;
-var leblancPosition = 0;
+var damonPosition;
+var leblancPosition;
 
 
 // Run the init() function when the page loads
@@ -38,8 +38,10 @@ window.onclick = MoveRacers;
 function init() {
     document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
     document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
-    document.getElementById("rat_damon").style.left = 0;
-    document.getElementById("rat_leblanc").style.left = 0;
+    damonPosition = 0;
+    document.getElementById("rat_damon").style.left = damonPosition + '%';
+    leblancPosition = 0;
+    document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
 }
 
