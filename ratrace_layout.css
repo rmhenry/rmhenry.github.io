@@ -105,6 +105,7 @@ div.bottom_finish_line {
 h1 {
     font-size: 2em;
     color: orangered;
+    line-height: 2em;
 }
 
 /* Image styles */
