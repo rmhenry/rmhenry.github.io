@@ -102,17 +102,12 @@ div.bottom_finish_line {
     grid-row-end: span 1;
 }
 
-/* Element styles - Classes */
+h1 {
+    font-size: 2em;
+    color: orangered;
+}
 
-/*div.background {
-    background-image: url("alley.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
-
-/* Element styles - IDs */
+/* Image styles */
 
 img#logo_img {
     display: block;
