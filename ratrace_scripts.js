@@ -25,18 +25,14 @@
 
 /* ================================================================= */
 
-var leftMessage = document.getElementById("left_message").innerHTML;
-var rightMessage = document.getElementById("right_message").innerHTML;
-var messageAreaImage = document.getElementById("message_area_image").innerHTML;
 var damonPosition = 0;
 var leblancPosition = 0;
-//var interval = setInterval(MoveRacers, 250);
 
 
 // Run the init() function when the page loads
 window.onload = init;
 
-// Run the init() function when the page loads
+// Run the MoveRacers() function when the mouse is clicked
 window.onclick = MoveRacers;
 
 function init() {
@@ -44,7 +40,7 @@ function init() {
     document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
     document.getElementById("rat_damon").style.left = 0;
     document.getElementById("rat_leblanc").style.left = 0;
-    messageAreaImage = "<img src='traffic_light_red.png' />";
+    document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
 }
 
 function MoveRacers(e) {
@@ -81,4 +77,5 @@ function DetermineWinner() {
     }
 
     window.onclick = init;
+    MoveRacers();
 }
