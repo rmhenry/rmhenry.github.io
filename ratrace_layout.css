@@ -26,6 +26,8 @@ html {
 
 body {
     background-image: url("alley.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Grid styles */
