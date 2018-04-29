@@ -104,17 +104,10 @@ div.bottom_finish_line {
 
 h1 {
     font-size: 2em;
-    color: orangered;
+    color: gold;
     line-height: 1.3em;
 }
 
-div.left_message h1 {
-    text-align: left;
-}
-
-div.right_message h1 {
-    text-align: right;
-}
 
 /* Image styles */
 

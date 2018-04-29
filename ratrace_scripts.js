@@ -68,17 +68,17 @@ function MoveRacers(e) {
 
 function DetermineWinner() {
     document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
+    document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
 
     if (damonPosition > leblancPosition) {
-        document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1>";
-        document.getElementById("right_message").innerHTML = "<h1>Jason Bourne to run!</h1>";
+        document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
     }
     else if (leblancPosition > damonPosition) {
-        document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1>";
-        document.getElementById("right_message").innerHTML = "<h1>Joey's not so slowy!</h1>";
+        document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
     }
     else {
-        document.getElementById("left_message").innerHTML = "<h1>Oh my...</h1>";
-        document.getElementById("right_message").innerHTML = "<h1>It's a tie!</h1>";
+        document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
+
+    window.onclick = init;
 }
