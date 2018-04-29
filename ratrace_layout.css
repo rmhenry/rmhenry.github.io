@@ -62,12 +62,10 @@ div.messageArea {
 
 div.left_message, div#message_area_image {
     float: left;
-    text-align: left;
 }
 
 div.right_message {
     float: right;
-    text-align: right;
 }
 
 div.topLane {
@@ -108,6 +106,14 @@ h1 {
     font-size: 2em;
     color: orangered;
     line-height: 1.3em;
+}
+
+div.left_message h1 {
+    text-align: left;
+}
+
+div.right_message h1 {
+    text-align: right;
 }
 
 /* Image styles */
