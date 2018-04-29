@@ -99,7 +99,7 @@ div.bottom_finish_line {
 
 /* Element styles - Classes */
 
-.background {
+div.background {
     background-image: url("alley.png");
     height: 100%;
     background-position: center;
