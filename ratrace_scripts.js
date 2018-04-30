@@ -28,17 +28,6 @@
 var damonPosition;
 var leblancPosition;
 
-
-// Run the init() function when the page loads
-window.onload = init;
-
-// Run the MoveRacers() function when the mouse is clicked
-window.onclick = Race;
-//var race = window.onclick = MoveRacers;
-
-//var winner = DetermineWinner();
-
-
 function init() {
     //document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
     //document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
@@ -136,3 +125,12 @@ function DisplayResults(winner) {
 
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
 }
+
+// Run the init() function when the page loads
+window.onload = init;
+
+// Run the MoveRacers() function when the mouse is clicked
+window.onclick = Race;
+//var race = window.onclick = MoveRacers;
+
+//var winner = DetermineWinner();
