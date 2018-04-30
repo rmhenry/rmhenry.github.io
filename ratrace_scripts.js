@@ -28,6 +28,9 @@
 var damonPosition;
 var leblancPosition;
 
+// Run the init() function when the page loads
+window.onload = init;
+
 function init() {
     //document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
     //document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
@@ -36,6 +39,9 @@ function init() {
     UpdateMessageArea("<h1>Click to start!</h1>", "< h1 > Click to start!</h1 >", "<img src='traffic_light_red.png' />");
     RacersToStartingLine();
 
+    // Run the MoveRacers() function when the mouse is clicked
+    window.onclick = Race;
+
     //damonPosition = 0;
     //document.getElementById("rat_damon").style.left = damonPosition + '%';
     //leblancPosition = 0;
@@ -43,9 +49,9 @@ function init() {
 }
 
 function UpdateMessageArea(leftMessage, rightMessage, image) {
-    document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
-    document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
-    document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
+    document.getElementById("left_message").innerHTML = leftMessage;
+    document.getElementById("right_message").innerHTML = rightMessage;
+    document.getElementById("message_area_image").innerHTML = image;
 }
 
 function RacersToStartingLine() {
@@ -126,11 +132,9 @@ function DisplayResults(winner) {
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
 }
 
-// Run the init() function when the page loads
-window.onload = init;
 
-// Run the MoveRacers() function when the mouse is clicked
-window.onclick = Race;
+
+
 //var race = window.onclick = MoveRacers;
 
 //var winner = DetermineWinner();
