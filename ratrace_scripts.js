@@ -64,20 +64,7 @@ function RacersToStartingLine() {
 function Race() {
     UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img src='traffic_light_green.png' />");
 
-    var raceInProgress = MoveRacers();
-
-    var winner = DetermineWinner();
-
-    DisplayResults(winner);
-
-}
-
-function MoveRacers(e) {
-    var moveRacersInterval = setInterval(function () {
-        //document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
-        //document.getElementById("right_message").innerHTML = "<h1>And they're off!</h1>";
-        //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-
+    var moveRacers = setInterval(function () {
         damonPosition += (Math.floor(Math.random() * 3) + 1);
         document.getElementById("rat_damon").style.left = damonPosition + '%';
         leblancPosition += (Math.floor(Math.random() * 3) + 1);
@@ -85,15 +72,40 @@ function MoveRacers(e) {
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
             clearInterval(moveRacersInterval);
-            return "something";
-            //DetermineWinner();
+            DetermineWinner();
         }
     }, 200);
+
+    var winner = DetermineWinner();
+
+    DisplayResults(winner);
+
 }
+
+//function MoveRacers(e) {
+//    var moveRacersInterval = setInterval(function () {
+//        //document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
+//        //document.getElementById("right_message").innerHTML = "<h1>And they're off!</h1>";
+//        //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
+
+//        damonPosition += (Math.floor(Math.random() * 3) + 1);
+//        document.getElementById("rat_damon").style.left = damonPosition + '%';
+//        leblancPosition += (Math.floor(Math.random() * 3) + 1);
+//        document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+
+//        if (leblancPosition >= 85 || damonPosition >= 85) {
+//            clearInterval(moveRacersInterval);
+//            return "something";
+//            //DetermineWinner();
+//        }
+//    }, 200);
+//}
 
 function DetermineWinner() {
     //document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
     //document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
+
+    var winner;
 
     if (damonPosition > leblancPosition) {
         return "Rat Damon";
@@ -108,8 +120,7 @@ function DetermineWinner() {
         //document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
-    //location.reload();
-    //MoveRacers();
+    DisplayResults(winner);
 }
 
 function DisplayResults(winner) {
@@ -131,10 +142,3 @@ function DisplayResults(winner) {
 
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
 }
-
-
-
-
-//var race = window.onclick = MoveRacers;
-
-//var winner = DetermineWinner();
