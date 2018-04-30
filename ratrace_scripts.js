@@ -36,7 +36,7 @@ window.onload = init;
 window.onclick = Race;
 //var race = window.onclick = MoveRacers;
 
-var winner = DetermineWinner();
+//var winner = DetermineWinner();
 
 
 function init() {
