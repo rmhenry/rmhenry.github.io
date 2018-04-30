@@ -71,6 +71,7 @@ function Race() {
 
     var raceInProgress = MoveRacers();
 
+    [lbl] raceEnd:
     var winner = DetermineWinner();
 
     DisplayResults(winner);
@@ -90,7 +91,8 @@ function MoveRacers(e) {
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
             clearInterval(moveRacersInterval);
-            return false;
+            goto raceEnd;
+            //return false;
             //DetermineWinner();
         }
     }, 200);
