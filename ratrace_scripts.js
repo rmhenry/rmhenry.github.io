@@ -35,6 +35,10 @@ window.onload = init;
 // Run the MoveRacers() function when the mouse is clicked
 window.onclick = MoveRacers;
 
+DetermineWinner();
+
+
+
 function init() {
     document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
     document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
@@ -58,9 +62,11 @@ function MoveRacers(e) {
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
             clearInterval(moveRacersInterval);
-            DetermineWinner();
+            //DetermineWinner();
         }
     }, 200);
+
+    return;
 
 }
 
@@ -78,6 +84,6 @@ function DetermineWinner() {
         document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
-    location.reload();
+    //location.reload();
     //MoveRacers();
 }
