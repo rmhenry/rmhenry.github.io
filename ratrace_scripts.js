@@ -61,12 +61,10 @@ function MoveRacers(e) {
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
             clearInterval(moveRacersInterval);
+            return;
             //DetermineWinner();
         }
     }, 200);
-
-    return;
-
 }
 
 function DetermineWinner() {
