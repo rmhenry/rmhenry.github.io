@@ -69,7 +69,14 @@ function RacersToStartingLine() {
 function Race() {
     UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img src='traffic_light_green.png' />");
 
-    MoveRacers();
+    while (leblancPosition < 85 && damonPosition < 85) {
+        MoveRacers();
+    }
+
+    var winner = DetermineWinner();
+
+    DisplayResults(winner);
+
 }
 
 function MoveRacers(e) {
@@ -83,28 +90,51 @@ function MoveRacers(e) {
         leblancPosition += (Math.floor(Math.random() * 3) + 1);
         document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 
-        if (leblancPosition >= 85 || damonPosition >= 85) {
-            clearInterval(moveRacersInterval);
-            return;
-            //DetermineWinner();
-        }
+        //if (leblancPosition >= 85 || damonPosition >= 85) {
+        //    clearInterval(moveRacersInterval);
+        //    return;
+        //    //DetermineWinner();
+        //}
     }, 200);
 }
 
 function DetermineWinner() {
-    document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
-    document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
+    //document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
+    //document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
 
     if (damonPosition > leblancPosition) {
-        document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
+        return "Rat Damon";
+        //document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
     }
     else if (leblancPosition > damonPosition) {
-        document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
+        return "Rat Leblanc";
+        //document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
     }
     else {
-        document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
+        return "tie";
+        //document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
     //location.reload();
     //MoveRacers();
+}
+
+function DisplayResults(winner) {
+    var leftMessage;
+
+    switch (winner) {
+        case "Rat Damon":
+            leftMessage = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
+            break;
+        case "Rat Leblanc":
+            leftMessage = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
+            break;
+        case "tie":
+            leftMessage = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
+            break;
+        default:
+            leftMessage = "<h1>Too close to call!</h1>";
+    }
+
+    UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
 }
