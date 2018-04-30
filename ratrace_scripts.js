@@ -33,10 +33,9 @@ var leblancPosition;
 window.onload = init;
 
 // Run the MoveRacers() function when the mouse is clicked
-window.onclick = MoveRacers;
+var race = window.onclick = MoveRacers;
 
-DetermineWinner();
-
+var winner = DetermineWinner();
 
 
 function init() {
