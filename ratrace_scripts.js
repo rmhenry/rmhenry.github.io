@@ -39,12 +39,20 @@ var winner = DetermineWinner();
 
 
 function init() {
-    document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
-    document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
+    //document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
+    //document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
+    //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
+
+    UpdateMessageArea("<h1>Click to start!</h1>", "< h1 > Click to start!</h1 >", "<img src='traffic_light_red.png' />" );
     damonPosition = 0;
     document.getElementById("rat_damon").style.left = damonPosition + '%';
     leblancPosition = 0;
     document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+}
+
+function UpdateMessageArea(leftMessage, rightMessage, image) {
+    document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
+    document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
     document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
 }
 
