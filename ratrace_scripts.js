@@ -36,7 +36,7 @@ function init() {
     //document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
     //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
 
-    UpdateMessageArea("<h1>Click to start!</h1>", "< h1 > Click to start!</h1 >", "<img src='traffic_light_red.png' />");
+    UpdateMessageArea("<h1>Click to start!</h1>", "<h1>Click to start!</h1>", "<img src='traffic_light_red.png' />");
     RacersToStartingLine();
 
     // Run the MoveRacers() function when the mouse is clicked
@@ -76,9 +76,9 @@ function Race() {
         }
     }, 200);
 
-    var winner = DetermineWinner();
+    //var winner = DetermineWinner();
 
-    DisplayResults(winner);
+    //DisplayResults(winner);
 
 }
 
@@ -108,15 +108,15 @@ function DetermineWinner() {
     var winner;
 
     if (damonPosition > leblancPosition) {
-        return "Rat Damon";
+        winner = "Rat Damon";
         //document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
     }
     else if (leblancPosition > damonPosition) {
-        return "Rat Leblanc";
+        winner =  "Rat Leblanc";
         //document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
     }
     else {
-        return "tie";
+        winner =  "tie";
         //document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
