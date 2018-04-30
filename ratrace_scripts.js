@@ -69,9 +69,7 @@ function RacersToStartingLine() {
 function Race() {
     UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img src='traffic_light_green.png' />");
 
-    while (leblancPosition < 85 && damonPosition < 85) {
-        MoveRacers();
-    }
+    MoveRacers();
 
     var winner = DetermineWinner();
 
