@@ -142,5 +142,5 @@ function DisplayResults(winner) {
 
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
 
-    window.onclick = location.reload();
+    //window.onclick = location.reload();
 }
