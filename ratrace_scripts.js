@@ -33,7 +33,8 @@ var leblancPosition;
 window.onload = init;
 
 // Run the MoveRacers() function when the mouse is clicked
-var race = window.onclick = MoveRacers;
+window.onclick = Race;
+//var race = window.onclick = MoveRacers;
 
 var winner = DetermineWinner();
 
@@ -63,6 +64,12 @@ function RacersToStartingLine() {
     document.getElementById("rat_damon").style.left = damonPosition + '%';
     leblancPosition = 0;
     document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
+}
+
+function Race() {
+    UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img src='traffic_light_green.png' />");
+
+    MoveRacers();
 }
 
 function MoveRacers(e) {
