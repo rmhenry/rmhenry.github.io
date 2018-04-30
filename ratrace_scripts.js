@@ -71,7 +71,7 @@ function Race() {
         document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
-            clearInterval(moveRacersInterval);
+            clearInterval(moveRacers);
             DetermineWinner();
         }
     }, 200);
