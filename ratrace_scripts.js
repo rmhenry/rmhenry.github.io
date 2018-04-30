@@ -78,6 +78,6 @@ function DetermineWinner() {
         document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
-    window.onclick = init;
-    MoveRacers();
+    location.reload();
+    //MoveRacers();
 }
