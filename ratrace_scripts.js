@@ -88,11 +88,11 @@ function MoveRacers(e) {
         leblancPosition += (Math.floor(Math.random() * 3) + 1);
         document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 
-        //if (leblancPosition >= 85 || damonPosition >= 85) {
-        //    clearInterval(moveRacersInterval);
-        //    return;
-        //    //DetermineWinner();
-        //}
+        if (leblancPosition >= 85 || damonPosition >= 85) {
+            clearInterval(moveRacersInterval);
+            return;
+            //DetermineWinner();
+        }
     }, 200);
 }
 
