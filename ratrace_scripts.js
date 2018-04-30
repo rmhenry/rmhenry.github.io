@@ -71,7 +71,7 @@ function Race() {
 
     var raceInProgress = MoveRacers();
 
-    [lbl] raceEnd:
+    raceEnd:
     var winner = DetermineWinner();
 
     DisplayResults(winner);
