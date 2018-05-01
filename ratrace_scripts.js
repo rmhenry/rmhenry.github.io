@@ -40,7 +40,7 @@ function init() {
     RacersToStartingLine();
 
     // Run the MoveRacers() function when the mouse is clicked
-    window.onclick = Race;
+    window.addEventListener("click", Race);
 
     //damonPosition = 0;
     //document.getElementById("rat_damon").style.left = damonPosition + '%';
