@@ -62,6 +62,7 @@ function RacersToStartingLine() {
 }
 
 function Race() {
+    window.removeEventListener("click", Race);
     UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img src='traffic_light_green.png' />");
 
     var moveRacers = setInterval(function () {
@@ -142,5 +143,6 @@ function DisplayResults(winner) {
 
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
 
+    window.addEventListener("click", init);
     //window.onclick = location.reload();
 }
