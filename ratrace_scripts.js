@@ -36,7 +36,7 @@ function init() {
     //document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
     //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
 
-    UpdateMessageArea("<h1>Click to start!</h1>", "<h1>Click to start!</h1>", "<img src='traffic_light_red.png' />");
+    UpdateMessageArea("<h1>Click to start!</h1>", "<h1>Click to start!</h1>", "<img id='traffic_light_red' src='traffic_light_red.png' />");
     RacersToStartingLine();
 
     // Run the MoveRacers() function when the mouse is clicked
@@ -63,7 +63,7 @@ function RacersToStartingLine() {
 
 function Race() {
     window.removeEventListener("click", Race);
-    UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img src='traffic_light_green.png' />");
+    UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img id = 'traffic_light_green' src='traffic_light_green.png' />");
 
     var moveRacers = setInterval(function () {
         damonPosition += (Math.floor(Math.random() * 3) + 1);
