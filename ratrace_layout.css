@@ -136,7 +136,6 @@ img#logo_img {
 
 img#traffic_light_red, img#traffic_light_green, img#trophy, img#damon_flag, img#leblanc_flag {
     width: 100%;
-    max-width: 150px;
     filter: drop-shadow(2px 2px 8px black);
 }
 
