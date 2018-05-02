@@ -43,6 +43,7 @@ div.grid-container {
 }
 
 div.winner_image {
+    visibility: hidden;
     position: absolute;
     left: 0;
     right: 0;
