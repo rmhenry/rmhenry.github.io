@@ -109,6 +109,7 @@ h1 {
     font-size: 1.9em;
     color: gold;
     line-height: 1.3em;
+    text-shadow: 2px 2px 8px black;
 }
 
 h2 {
