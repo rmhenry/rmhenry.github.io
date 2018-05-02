@@ -27,6 +27,7 @@ body {
     background-image: url("alley.png");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Grid styles */
@@ -109,8 +110,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.7em;
-    color: gold;
+    font-size: 1.8em;
+    color: orangered;
     line-height: 1.3em;
 }
 
