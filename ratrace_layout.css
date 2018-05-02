@@ -21,6 +21,7 @@ html {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+    text-align: center;
 }
 
 body {
