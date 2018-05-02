@@ -141,7 +141,7 @@ function DisplayResults(winner) {
             leftMessage = "<h1>Too close to call!</h1>";
     }
 
-    UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img src='trophy.png' />");
+    UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img id='trophy' src='trophy.png' />");
 
     window.addEventListener("click", init);
     //window.onclick = location.reload();

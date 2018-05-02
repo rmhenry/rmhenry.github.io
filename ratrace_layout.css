@@ -130,25 +130,20 @@ img#logo_img {
     margin-right: auto;
 }
 
-img#traffic_light_red, img#traffic_light_green {
+img#traffic_light_red, img#traffic_light_green, img#trophy {
     width: 100%;
+    filter: drop-shadow(2px 2px 8px black);
 }
 
 img#rat_damon, img#rat_leblanc {
     display: block;
     width: 23%;
     position: relative;
-}
-
-img#rat_damon {
-    left: 5%;
-}
-
-img#rat_leblanc {
-    left: 84%;
+    filter: drop-shadow(2px 2px 8px black);
 }
 
 img#cheese_top, img#cheese_bottom {
     display: block;
     width: 65%;
+    filter: drop-shadow(2px 2px 8px black);
 }
