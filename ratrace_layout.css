@@ -114,8 +114,9 @@ h1 {
 
 h2 {
     font-size: 1.7em;
-    color: orangered;
+    color: goldenrod;
     line-height: 1.3em;
+    text-shadow: 2px 2px 8px black;
 }
 
 
