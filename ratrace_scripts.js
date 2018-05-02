@@ -126,22 +126,26 @@ function DetermineWinner() {
 
 function DisplayResults(winner) {
     var leftMessage;
+    var image;
 
     switch (winner) {
         case "Rat Damon":
             leftMessage = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
+            image = "<img id='damon_flag' src='damon_flag.png' />";
             break;
         case "Rat Leblanc":
             leftMessage = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
+            image = "<img id='leblanc_flag' src='leblanc_flag.png' />";
             break;
         case "tie":
             leftMessage = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
+            image = "<img id='trophy' src='trophy.png' />";
             break;
         default:
             leftMessage = "<h1>Too close to call!</h1>";
     }
 
-    UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", "<img id='trophy' src='trophy.png' />");
+    UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", image);
 
     window.addEventListener("click", init);
     //window.onclick = location.reload();
