@@ -63,10 +63,12 @@ div.messageArea {
 
 div.left_message, div#message_area_image {
     float: left;
+    padding: 2%;
 }
 
 div.right_message {
     float: right;
+    padding: 2%;
 }
 
 div.topLane {
@@ -104,13 +106,13 @@ div.bottom_finish_line {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.9em;
     color: gold;
     line-height: 1.3em;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.7em;
     color: orangered;
     line-height: 1.3em;
 }
