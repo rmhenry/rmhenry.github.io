@@ -83,13 +83,10 @@ div#right_message {
     /*padding: 2%;*/
 }
 
-<<<<<<< HEAD
 div#left_message, div#right_message {
     text-align: center;
 }
 
-=======
->>>>>>> parent of 8ef0d32... center align text in left and right message divs
 div.topLane {
     grid-column-start: 2;
     grid-column-end: span 1;
