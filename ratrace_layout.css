@@ -73,7 +73,7 @@ div.messageArea {
     justify-content: space-around;
 }
 
-div.left_message, div#message_area_image {
+div.left_message, div.message_area_image {
     float: left;
     padding: 2%;
 }
