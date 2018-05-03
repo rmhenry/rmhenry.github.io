@@ -63,7 +63,7 @@ function RacersToStartingLine() {
 
 function Race() {
     window.removeEventListener("click", Race);
-    UpdateMessageArea("<h1>And they're off!</h1>", "<h1>And they're off!</h1>", "<img id = 'traffic_light_green' src='traffic_light_green.png' />");
+    UpdateMessageArea("<h1>Jason Bourne to run!</h1>", "<h1>Joey's not so slowy!</h1>", "<img id = 'traffic_light_green' src='traffic_light_green.png' />");
 
     var moveRacers = setInterval(function () {
         damonPosition += (Math.floor(Math.random() * 3) + 1);
@@ -130,16 +130,16 @@ function DisplayResults(winner) {
 
     switch (winner) {
         case "Rat Damon":
-            leftMessage = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
+            leftMessage = "<h1>Rat Damon wins!</h1>";
             image = "<img id='damon_flag' src='damon_flag.png' />";
             break;
         case "Rat Leblanc":
-            leftMessage = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
+            leftMessage = "<h1>Rat Leblanc wins!</h1>";
             image = "<img id='leblanc_flag' src='leblanc_flag.png' />";
             break;
         case "tie":
-            leftMessage = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
-            image = "<img id='trophy' src='trophy.png' />";
+            leftMessage = "<h1>Oh my, it's a tie</h1>";
+            image = "<img id='tie' src='tie.png' />";
             break;
         default:
             leftMessage = "<h1>Too close to call!</h1>";

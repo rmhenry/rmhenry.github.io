@@ -146,7 +146,7 @@ img#logo_img {
     margin-right: auto;
 }
 
-img#traffic_light_red, img#traffic_light_green, img#trophy, img#damon_flag, img#leblanc_flag {
+img#traffic_light_red, img#traffic_light_green, img#tie, img#damon_flag, img#leblanc_flag {
     width: 100%;
     filter: drop-shadow(2px 2px 8px black);
 }
