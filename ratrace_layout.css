@@ -73,16 +73,23 @@ div.messageArea {
     justify-content: space-around;
 }
 
-div.left_message, div#message_area_image {
-    float: left;
-    padding: 2%;
+div#left_message, div#message_area_image {
+    /*float: left;*/
+    /*padding: 2%;*/
 }
 
-div.right_message {
-    float: right;
-    padding: 2%;
+div#right_message {
+    /*float: right;*/
+    /*padding: 2%;*/
 }
 
+<<<<<<< HEAD
+div#left_message, div#right_message {
+    text-align: center;
+}
+
+=======
+>>>>>>> parent of 8ef0d32... center align text in left and right message divs
 div.topLane {
     grid-column-start: 2;
     grid-column-end: span 1;
