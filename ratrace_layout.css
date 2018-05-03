@@ -74,12 +74,12 @@ div.messageArea {
 }
 
 div#left_message, div#message_area_image {
-    float: left;
+    /*float: left;*/
     /*padding: 2%;*/
 }
 
 div#right_message {
-    float: right;
+    /*float: right;*/
     /*padding: 2%;*/
 }
 
