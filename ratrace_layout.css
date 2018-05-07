@@ -32,6 +32,7 @@ body {
 
 /* Grid styles */
 
+/*Full-page container for a 5 row x 3 column grid layout*/
 div.grid-container {
     width: 100%;
     height: 100%;
@@ -46,12 +47,14 @@ header, footer {
     grid-row: span 1;
 }
 
+/* Establishes an empty left margin between the header and footer */
 div.left {
     grid-column: span 1;
     grid-row-start: 2;
     grid-row-end: span 3;
 }
 
+/* Container for the area where traffic light images, winner images, and instructional text is displayed */
 div.messageArea {
     grid-column-start: 2;
     grid-column-end: span 1;
@@ -62,10 +65,12 @@ div.messageArea {
     justify-content: space-around;
 }
 
+/* Container for where message text is displayed on either side of the triffic light/winner image */
 div#left_message, div#right_message {
     text-align: center;
 }
 
+/* This row is a container for the top racer's avatar */
 div.topLane {
     grid-column-start: 2;
     grid-column-end: span 1;
@@ -73,6 +78,7 @@ div.topLane {
     grid-row-end: span 1;
 }
 
+/* This row is a container for the bottom racer's avatar */
 div.bottomLane {
     grid-column-start: 2;
     grid-column-end: span 1;
@@ -80,12 +86,14 @@ div.bottomLane {
     grid-row-end: span 1;
 }
 
+/* Establishes an empty right margin between the header and footer */
 div.right {
     grid-column: span 1;
     grid-row-start: 2;
     grid-row-end: span 1;
 }
 
+/* This cell contains the image that serves as the top racer's finish line */
 div.top_finish_line {
     grid-column-start: 3;
     grid-column-end: span 1;
@@ -93,6 +101,7 @@ div.top_finish_line {
     grid-row-end: span 1;
 }
 
+/* This cell contains the image that serves as the top racer's finish line */
 div.bottom_finish_line {
     grid-column-start: 3;
     grid-column-end: span 1;
@@ -100,6 +109,7 @@ div.bottom_finish_line {
     grid-row-end: span 1;
 }
 
+/* For text that is displayed in the message area div */
 h1 {
     font-size: 1.9em;
     color: gold;
@@ -114,6 +124,7 @@ h2 {
     text-shadow: 2px 2px 8px black;
 }
 
+/* For footer text */
 h6 {
     font-size: 0.7em;
 }
@@ -121,6 +132,7 @@ h6 {
 
 /* Image styles */
 
+/* The logo image displayed at the top center of the page */
 img#logo_img {
     display: block;
     width: 44%;
@@ -129,11 +141,13 @@ img#logo_img {
     margin-right: auto;
 }
 
+/* The images that are displayed within the message area */
 img#traffic_light_red, img#traffic_light_green, img#tie, img#damon_flag, img#leblanc_flag {
     width: 100%;
     filter: drop-shadow(2px 2px 8px black);
 }
 
+/* The images that server as the racers' avatars */
 img#rat_damon, img#rat_leblanc {
     display: block;
     width: 23%;
@@ -141,6 +155,7 @@ img#rat_damon, img#rat_leblanc {
     filter: drop-shadow(2px 2px 8px black);
 }
 
+/* This images displayed at the racers' finishe lines */
 img#cheese_top, img#cheese_bottom {
     display: block;
     width: 65%;
