@@ -67,11 +67,6 @@ function Race() {
             DetermineWinner();
         }
     }, 200);
-
-    //var winner = DetermineWinner();
-
-    //DisplayResults(winner);
-
 }
 
 //function MoveRacers(e) {
