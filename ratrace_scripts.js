@@ -70,8 +70,6 @@ function Race() {
 }
 
 function DetermineWinner() {
-    //document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
-    //document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
 
     var winner;
 
