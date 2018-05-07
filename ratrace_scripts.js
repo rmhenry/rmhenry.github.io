@@ -55,7 +55,8 @@
             image
             right message
 
-    
+    RacersToStartingLine
+        Sets each racer's avatar style.left property to 0%.
 	
 */
 
@@ -87,6 +88,9 @@ function UpdateMessageArea(leftMessage, rightMessage, image) {
 }
 
 function RacersToStartingLine() {
+    // Set the racer avatars' position variable values to 0, then
+    // append the position int with a % symbol and set the string
+    // as the avatar elements' innerHTML.
     damonPosition = 0;
     document.getElementById("rat_damon").style.left = damonPosition + '%';
     leblancPosition = 0;
