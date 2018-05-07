@@ -57,6 +57,21 @@
 
     RacersToStartingLine
         Sets each racer's avatar style.left property to 0%.
+
+    Race
+        Creates an onclick event listener to start a race.
+        Calls UpdateMessageArea function to display green light and race messages.
+        The moveRacers variable facilitates the following:
+            An anomymous local function is created.
+            The function is called at an interval of every 200 milliseconds.
+            The racers' position variables are increased by a value of
+                1 to 3 using the Math.random method.
+            When either avatar's style.left property value reaches 85%:
+                The interval is cleared, and the function stops firing.
+                The DetermineWinner function is called.
+            
+            
+        
 	
 */
 
@@ -98,20 +113,35 @@ function RacersToStartingLine() {
 }
 
 function Race() {
+    // Start a race when the mouse is clicked.
     window.removeEventListener("click", Race);
+
+    // Display the green light as the message area image.
+    // Display message text that pertains to the race in progress.
     UpdateMessageArea("<h1>Jason Bourne to run!</h1>", "<h1>Joey's not so slowy!</h1>", "<img id = 'traffic_light_green' src='traffic_light_green.png' />");
 
     var moveRacers = setInterval(function () {
+        // Steps for moving an avatar to the right:
+            // Increase each racer's position variable by a random int value from 1-3.
+            // Append the position variable int with a % sign.
+            // Set the string as the avatar element's innerHTML.
         damonPosition += (Math.floor(Math.random() * 3) + 1);
         document.getElementById("rat_damon").style.left = damonPosition + '%';
         leblancPosition += (Math.floor(Math.random() * 3) + 1);
         document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 
         if (leblancPosition >= 85 || damonPosition >= 85) {
+        // If either racer's avatar reaches the finish line
+            // Note: The value 85 corresponds to the screen position at which
+            // a racer's avatar touches the finish line image.
+
+            // Stop firing the function that moves the racers.
             clearInterval(moveRacers);
+
+            // Evaluate the racers' positions to determine who won the race.
             DetermineWinner();
         }
-    }, 200);
+    }, 200);    // This function is fired every 200 milliseconds.
 }
 
 function DetermineWinner() {
