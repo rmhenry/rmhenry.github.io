@@ -48,6 +48,13 @@
             to the starting line.
         Establish an onclick event listener to start the race.
 
+    UpdateMessageArea
+        Uses arguments to set the innerHTML for the following
+        elements in the page's message area div:
+            left message
+            image
+            right message
+
     
 	
 */
@@ -72,6 +79,8 @@ function init() {
 }
 
 function UpdateMessageArea(leftMessage, rightMessage, image) {
+    // Set each element's innerHTML to the string value saved 
+    // in the parameter list variables.
     document.getElementById("left_message").innerHTML = leftMessage;
     document.getElementById("right_message").innerHTML = rightMessage;
     document.getElementById("message_area_image").innerHTML = image;
