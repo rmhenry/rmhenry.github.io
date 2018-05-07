@@ -113,5 +113,4 @@ function DisplayResults(winner) {
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", image);
 
     window.addEventListener("click", init);
-    //window.onclick = location.reload();
 }
