@@ -11,8 +11,30 @@
    Variables
    =========
 
-   variable names
-      description
+   damonPosition
+      Holds the int value used to set the Rat Leblanc
+      avatar's style.left property
+
+   leblancPosition
+      Holds the int value used to set the Rat Leblanc
+      avatar's style.left property
+
+
+   moveRacers - in Race function
+       Used to set the interval for the function
+       that updates the avatars' style.left properties
+
+   winner - in DetermineWinner function
+       Holds a text string describing which avatar
+       win the race
+
+   leftMessage - in DisplayResults function
+       Holds the string used to update the div#left_message
+       element's innerHTML
+
+   image - in DisplayResults function
+       Holds the string used to update the div#message_area_image
+       element's innerHTML
   	
 
     Function List
