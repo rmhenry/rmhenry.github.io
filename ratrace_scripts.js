@@ -69,25 +69,6 @@ function Race() {
     }, 200);
 }
 
-//function MoveRacers(e) {
-//    var moveRacersInterval = setInterval(function () {
-//        //document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
-//        //document.getElementById("right_message").innerHTML = "<h1>And they're off!</h1>";
-//        //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-
-//        damonPosition += (Math.floor(Math.random() * 3) + 1);
-//        document.getElementById("rat_damon").style.left = damonPosition + '%';
-//        leblancPosition += (Math.floor(Math.random() * 3) + 1);
-//        document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
-
-//        if (leblancPosition >= 85 || damonPosition >= 85) {
-//            clearInterval(moveRacersInterval);
-//            return "something";
-//            //DetermineWinner();
-//        }
-//    }, 200);
-//}
-
 function DetermineWinner() {
     //document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
     //document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
