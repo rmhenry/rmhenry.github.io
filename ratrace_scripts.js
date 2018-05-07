@@ -186,7 +186,7 @@ function DisplayResults(winner) {
             image = "<img id='leblanc_flag' src='leblanc_flag.png' />";
             break;
         case "tie":
-            leftMessage = "<h1>Oh my, it's a tie</h1>";
+            leftMessage = "<h1>Oh my, it's a tie!</h1>";
             image = "<img id='tie' src='tie.png' />";
             break;
         default:
