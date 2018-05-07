@@ -74,7 +74,12 @@
         Compare the values of each racer's position variable.
         Save a text string describing which character won the race.
         Call a function to display the results on screen.
-        
+
+   DisplayResults
+        Update the message area divs to reflect the race winner.
+            Left message displays the winner's name.
+            Image div displays the winner's image.
+            Right message instructs user to click to race again.
 	
 */
 
@@ -169,6 +174,8 @@ function DisplayResults(winner) {
     var leftMessage;
     var image;
 
+    // Set the left message and image variable
+    // variables to reflect who won the race.
     switch (winner) {
         case "Rat Damon":
             leftMessage = "<h1>Rat Damon wins!</h1>";
@@ -183,10 +190,15 @@ function DisplayResults(winner) {
             image = "<img id='tie' src='tie.png' />";
             break;
         default:
+        // in the event that a winner cannot be determined
+        // for some reason
             leftMessage = "<h1>Too close to call!</h1>";
     }
 
+    // Send the leftMessage and image variables as arguments
+    // to the UpdateMessageArea function.
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", image);
 
+    // User can race again by calling the init function onclick.
     window.addEventListener("click", init);
 }
