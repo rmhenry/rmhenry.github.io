@@ -13,6 +13,7 @@
 
 
 /* HTML and body styles */
+/************************/
 
 html {
     max-width: 1024px;
@@ -31,6 +32,7 @@ body {
 }
 
 /* Grid styles */
+/***************/
 
 /*Full-page container for a 5 row x 3 column grid layout*/
 div.grid-container {
@@ -109,6 +111,9 @@ div.bottom_finish_line {
     grid-row-end: span 1;
 }
 
+/* Text styles */
+/***************/
+
 /* For text that is displayed in the message area div */
 h1 {
     font-size: 1.9em;
@@ -131,6 +136,7 @@ h6 {
 
 
 /* Image styles */
+/****************/
 
 /* The logo image displayed at the top center of the page */
 img#logo_img {
