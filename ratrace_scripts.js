@@ -40,8 +40,15 @@
     Function List
     =============
 
-    function names
-      description
+    init
+      Do the following when the page loads:
+        Set the message area text and images to their
+            beginning values.
+        Call the function to return the racer avatars
+            to the starting line.
+        Establish an onclick event listener to start the race.
+
+    
 	
 */
 
@@ -54,10 +61,13 @@ var leblancPosition;
 window.onload = init;
 
 function init() {
+    // Set left message, right message, and image to their pre-race values.
     UpdateMessageArea("<h1>Click to start!</h1>", "<h1>Click to start!</h1>", "<img id='traffic_light_red' src='traffic_light_red.png' />");
+
+    // Move racers to the starting line.
     RacersToStartingLine();
 
-    // Run the MoveRacers() function when the mouse is clicked
+    // Run the MoveRacers() function when the mouse is clicked.
     window.addEventListener("click", Race);
 }
 
