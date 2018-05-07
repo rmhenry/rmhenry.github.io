@@ -11,9 +11,19 @@
    Variables
    =========
 
-   variable names
-      description
-  	
+   damonPosition
+      Holds the int value used to set the Rat Damon avatar's style.left position
+
+   leblancPosition
+  	  Holds the int value used to set the Rat Leblanc avatar's style.left position
+
+   winner - in DetermineWinner function
+
+
+   leftMessage - in DisplayResults function
+
+
+   image - in DisplayResults function
 
     Function List
     =============
@@ -32,20 +42,12 @@ var leblancPosition;
 window.onload = init;
 
 function init() {
-    //document.getElementById("left_message").innerHTML = "<h1>Click to start!</h1>";
-    //document.getElementById("right_message").innerHTML = "<h1>Click to start!</h1>";
-    //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_red.png' />";
-
     UpdateMessageArea("<h1>Click to start!</h1>", "<h1>Click to start!</h1>", "<img id='traffic_light_red' src='traffic_light_red.png' />");
     RacersToStartingLine();
 
     // Run the MoveRacers() function when the mouse is clicked
     window.addEventListener("click", Race);
 
-    //damonPosition = 0;
-    //document.getElementById("rat_damon").style.left = damonPosition + '%';
-    //leblancPosition = 0;
-    //document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
 }
 
 function UpdateMessageArea(leftMessage, rightMessage, image) {
@@ -76,49 +78,20 @@ function Race() {
             DetermineWinner();
         }
     }, 200);
-
-    //var winner = DetermineWinner();
-
-    //DisplayResults(winner);
-
 }
 
-//function MoveRacers(e) {
-//    var moveRacersInterval = setInterval(function () {
-//        //document.getElementById("left_message").innerHTML = "<h1>And they're off!</h1>";
-//        //document.getElementById("right_message").innerHTML = "<h1>And they're off!</h1>";
-//        //document.getElementById("message_area_image").innerHTML = "<img src='traffic_light_green.png' />";
-
-//        damonPosition += (Math.floor(Math.random() * 3) + 1);
-//        document.getElementById("rat_damon").style.left = damonPosition + '%';
-//        leblancPosition += (Math.floor(Math.random() * 3) + 1);
-//        document.getElementById("rat_leblanc").style.left = leblancPosition + '%';
-
-//        if (leblancPosition >= 85 || damonPosition >= 85) {
-//            clearInterval(moveRacersInterval);
-//            return "something";
-//            //DetermineWinner();
-//        }
-//    }, 200);
-//}
-
 function DetermineWinner() {
-    //document.getElementById("message_area_image").innerHTML = "<img src='trophy.png' />";
-    //document.getElementById("right_message").innerHTML = "<h1>Click to race again!</h1>";
 
     var winner;
 
     if (damonPosition > leblancPosition) {
         winner = "Rat Damon";
-        //document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
     }
     else if (leblancPosition > damonPosition) {
         winner =  "Rat Leblanc";
-        //document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
     }
     else {
         winner =  "tie";
-        //document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
     DisplayResults(winner);
@@ -148,5 +121,4 @@ function DisplayResults(winner) {
     UpdateMessageArea(leftMessage, "<h1>Click to race again!</h1>", image);
 
     window.addEventListener("click", init);
-    //window.onclick = location.reload();
 }
