@@ -70,7 +70,10 @@
                 The interval is cleared, and the function stops firing.
                 The DetermineWinner function is called.
             
-            
+   DetermineWinner
+        Compare the values of each racer's position variable.
+        Save a text string describing which character won the race.
+        Call a function to display the results on screen.
         
 	
 */
@@ -150,17 +153,15 @@ function DetermineWinner() {
 
     if (damonPosition > leblancPosition) {
         winner = "Rat Damon";
-        //document.getElementById("left_message").innerHTML = "<h1>Rat Damon wins!</h1></br></br><h2>Jason Bourne to run!</h2>";
     }
     else if (leblancPosition > damonPosition) {
         winner =  "Rat Leblanc";
-        //document.getElementById("left_message").innerHTML = "<h1>Rat Leblanc wins!</h1></br></br><h2>Joey's not so slowy!</h2>";
     }
     else {
         winner =  "tie";
-        //document.getElementById("left_message").innerHTML = "<h1>Oh my,</h1></br></br><h2>it's a tie!</h2>";
     }
 
+    // Call function to display the results on screen.
     DisplayResults(winner);
 }
 
